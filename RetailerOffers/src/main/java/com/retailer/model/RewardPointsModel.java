@@ -1,6 +1,6 @@
 package com.retailer.model;
 
-import java.time.LocalDate;
+import java.util.Map;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 
 /**
  *  
- * Model class represents a public class TransactionModel  
+ * Model class represents a RewardPointsModel 
  * 
- * TransactionModel is DTO class for Transaction Entity.
+ * RewardPointsModel gives the result of total Points and Monthly points
  * 
  * Here we using Lombok for @Data, @AllArgsConstructor, @NoArgsConstructor.
  *  so no need to add constructor, getters and setters.
@@ -20,14 +20,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TransactionModel {
+public class RewardPointsModel {
 	
-    private Integer id;
-
-    private Integer customerId;
-
-    private LocalDate date;
-
-    private Double amount;
+	private Map<String , Integer> monthlyPoints;
+	private Integer totalPoints;
+	
 
 }

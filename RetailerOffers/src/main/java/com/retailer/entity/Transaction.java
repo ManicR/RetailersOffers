@@ -2,6 +2,8 @@ package com.retailer.entity;
 
 import java.time.LocalDate;
 
+import com.retailer.exception.CustomException;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,6 +14,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
+/**
+ *  
+ * Entity class represents a transaction 
+ * 
+ * A Transaction is a record of a customer's purchase
+ * 
+ * Here we using Lombok for @Data, @AllArgsConstructor, @NoArgsConstructor.
+ *  so no need to add constructor, getters and setters.
+ * 
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,7 +32,11 @@ import lombok.NoArgsConstructor;
 @Table(name = "transaction")
 public class Transaction {
 	
-	
+	/**
+	 * 
+	 * Unique Identifier for the transaction
+	 * Generate the values  	
+	 */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
