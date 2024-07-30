@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: RetailerOffers
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:RetailerDB
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
