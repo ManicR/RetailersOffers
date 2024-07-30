@@ -1,16 +1,28 @@
 package com.retailer.repository;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.retailer.entity.Transaction;
 
+/**
+ *  
+ * Repository interface for Transaction entity. 
+ * 
+ * Providing methods for accessing and manipulating transactions in the database.
+ * 
+ * 
+ */
 public interface TransactionRepository extends JpaRepository<Transaction, Integer>{
 
-	List<Transaction> findByCustomerIdAndDateBetween(Integer cutomerId, LocalDate startDate, LocalDate endDate);
-
+	/**
+	 *  
+	 * find transactions for a given customer id
+	 * @param cId customerId
+	 * 
+	 */
+	
 	List<Transaction> findByCustomerId(Integer cId);
 
 }
